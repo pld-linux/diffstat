@@ -9,6 +9,7 @@ Release:	3
 License:	distributable
 Group:		Applications/Text
 Source0:	ftp://ftp.clark.net/pub/dickey/%{name}/%{name}-%{version}.tgz
+# Source0-md5:	c75ab2a0e0be45ac89931e95020aa032
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
