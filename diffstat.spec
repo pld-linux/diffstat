@@ -4,12 +4,12 @@ Summary(fr):	Fournit des statistiques sur les différences de fichiers
 Summary(pl):	Umo¿liwia robienie statystyk plików diff
 Summary(tr):	diff dosyasý istatistik bilgileri çýkarýr
 Name:		diffstat
-Version:	1.35
+Version:	1.38
 Release:	1
 License:	distributable
 Group:		Applications/Text
 Source0:	ftp://invisible-island.net/diffstat/%{name}.tar.gz
-# Source0-md5:	97a8061b3f8510d6a5c490eea75d8230
+# Source0-md5:	79e948aae49d2a0bd767b791e5cc132f
 URL:		http://invisible-island.net/diffstat/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -52,7 +52,9 @@ istatistiksel bilgiler çýkartýr.
 chmod -R u+w *
 %{__autoconf}
 %configure
-%{__make} CPPFLAGS="%{rpmcflags} -w" LDFLAGS="%{rpmldflags}"
+%{__make} \
+	CPPFLAGS="%{rpmcflags} -w" \
+	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
