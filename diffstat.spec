@@ -8,9 +8,6 @@ Version:	1.28
 Release:	3
 License:	distributable
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 Source0:	ftp://ftp.clark.net/pub/dickey/%{name}/%{name}-%{version}.tgz
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
