@@ -52,7 +52,7 @@ make CPPFLAGS="$RPM_OPT_FLAGS -w" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%%{_bindir},%{_mandir}/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install diffstat $RPM_BUILD_ROOT%{_bindir}
 install diffstat.1 $RPM_BUILD_ROOT%{_mandir}/man1
