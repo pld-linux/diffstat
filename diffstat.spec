@@ -5,13 +5,14 @@ Summary(pl):	Umo¿liwia robienie statystyk plików diff
 Summary(tr):	diff dosyasý istatistik bilgileri çýkarýr
 Name:		diffstat
 Version:	1.28
-Release:	2
+Release:	3
 License:	Distributable
 Group:		Applications/Text
 Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
 Group(pl):	Aplikacje/Tekst
-Source0:	ftp://ftp.clark.net/pub/dickey/diffstat/%{name}-%{version}.tgz
+Source0:	ftp://ftp.clark.net/pub/dickey/%{name}/%{name}-%{version}.tgz
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -49,7 +50,8 @@ istatistiksel bilgiler çýkartýr.
 %setup -q
 
 %build
-
+chmod -R u+w *
+autoconf
 %configure
 %{__make} CPPFLAGS="%{rpmcflags} -w" LDFLAGS="%{rpmldflags}"
 
