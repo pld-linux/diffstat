@@ -5,10 +5,11 @@ Summary(pl): Umo¿liwia robienie statystyk plików diff
 Summary(tr): diff dosyasý istatistik bilgileri çýkarýr
 Name:        diffstat
 Version:     1.25
-Release:     6
-Source:      ftp.clark.net:/pub/dickey/diffstat/%{name}-%{version}.tgz
-Group:       Utilities/Text
+Release:     7
 Copyright:   distributable
+Group:       Utilities/Text
+Group(pl):   Narzêdzia/Tekst
+Source:      ftp.clark.net:/pub/dickey/diffstat/%{name}-%{version}.tgz
 Buildroot:   /tmp/%{name}-%{version}-root
 
 %description
@@ -55,16 +56,24 @@ install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 install diffstat $RPM_BUILD_ROOT/usr/bin
 install diffstat.1 $RPM_BUILD_ROOT/usr/man/man1
 
+gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
+gzip -9nf README CHANGES
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644, root, root, 755)
-%doc README CHANGES
+%doc README.gz CHANGES.gz
 %attr(755, root, root) /usr/bin/*
 %attr(644, root,  man) /usr/man/man1/*
 
 %changelog
+* Wed Feb 17 1999 Micha³ Kuratczyk <kura@wroclaw.art.pl>
+  [1.25-7]
+- added gzipping man page and documentation
+- added Group(pl)
+
 * Thu Jul 23 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
   [1.25-6]
 - added pl translation,
