@@ -7,9 +7,10 @@ Name:		diffstat
 Version:	1.28
 Release:	1
 Copyright:	distributable
-Group:		Utilities/Text
+Group:		Applications/Text
+Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
-Group(pl):	Narzêdzia/Tekst
+Group(pl):	Aplikacje/Tekst
 Source0:	ftp://ftp.clark.net/pub/dickey/diffstat/%{name}-%{version}.tgz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,7 +51,7 @@ istatistiksel bilgiler çýkartýr.
 %build
 
 %configure
-%{__make} CPPFLAGS="$RPM_OPT_FLAGS -w" LDFLAGS="-s"
+%{__make} CPPFLAGS="%{rpmcflags} -w" LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -59,8 +60,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 install diffstat $RPM_BUILD_ROOT%{_bindir}
 install diffstat.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	README CHANGES
+gzip -9nf README CHANGES
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -69,5 +69,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {README,CHANGES}.gz
 %attr(755,root,root) %{_bindir}/*
-
 %{_mandir}/man1/*
