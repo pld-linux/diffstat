@@ -1,15 +1,15 @@
-Summary:     Provides diff file statistics
-Summary(de): Liefert diff-Datei-Statistiken
-Summary(fr): Fournit des statistiques sur les différences de fichiers.
-Summary(pl): Umo¿liwia robienie statystyk plików diff
-Summary(tr): diff dosyasý istatistik bilgileri çýkarýr
-Name:        diffstat
-Version:     1.25
-Release:     7
-Copyright:   distributable
-Group:       Utilities/Text
-Group(pl):   Narzêdzia/Tekst
-Source:      ftp.clark.net:/pub/dickey/diffstat/%{name}-%{version}.tgz
+Summary:	Provides diff file statistics
+Summary(de):	Liefert diff-Datei-Statistiken
+Summary(fr):	Fournit des statistiques sur les différences de fichiers.
+Summary(pl):	Umo¿liwia robienie statystyk plików diff
+Summary(tr):	diff dosyasý istatistik bilgileri çýkarýr
+Name:		diffstat
+Version:	1.27
+Release:	1
+Copyright:	distributable
+Group:		Utilities/Text
+Group(pl):	Narzêdzia/Tekst
+Source:		ftp.clark.net:/pub/dickey/diffstat/%{name}-%{version}.tgz
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -46,12 +46,13 @@ bilgiler çýkartýr.
 %setup -q
 
 %build
-./configure %{_target_platform} --prefix=/usr
-make CPPFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
+
+./configure %{_target_platform} --prefix=%{_prefix}
+make CPPFLAGS="$RPM_OPT_FLAGS -w" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
+install -d $RPM_BUILD_ROOT%{_prefix}/{bin,share/man/man1}
 
 install diffstat $RPM_BUILD_ROOT%{_bindir}
 install diffstat.1 $RPM_BUILD_ROOT%{_mandir}/man1
@@ -64,8 +65,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz CHANGES.gz
+%doc {README,CHANGES}.gz
 %attr(755,root,root) %{_bindir}/*
+
 %{_mandir}/man1/*
 
 %changelog
@@ -80,9 +82,3 @@ rm -rf $RPM_BUILD_ROOT
 - added buildroot support,
 - build from non root's account,
 - minor changes.
-
-* Mon Apr 27 1998 Prospector System <bugs@redhat.com>
-- translations modified for de, fr, tr
-
-* Thu Jul 10 1997 Erik Troan <ewt@redhat.com>
-- built against glibc
