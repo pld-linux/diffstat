@@ -59,13 +59,11 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 install diffstat $RPM_BUILD_ROOT%{_bindir}
 install diffstat.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf README CHANGES
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,CHANGES}.gz
+%doc README CHANGES
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
