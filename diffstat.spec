@@ -48,7 +48,7 @@ istatistiksel bilgiler çýkartýr.
 
 %build
 chmod -R u+w *
-autoconf
+%{__autoconf}
 %configure
 %{__make} CPPFLAGS="%{rpmcflags} -w" LDFLAGS="%{rpmldflags}"
 
