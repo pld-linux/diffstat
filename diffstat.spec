@@ -46,7 +46,7 @@ bilgiler çýkartýr.
 %setup -q
 
 %build
-./configure --prefix=/usr
+./configure %{_target} --prefix=/usr
 make CPPFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
 
 %install
