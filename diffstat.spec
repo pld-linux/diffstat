@@ -50,7 +50,7 @@ istatistiksel bilgiler çýkartýr.
 %build
 
 %configure
-make CPPFLAGS="$RPM_OPT_FLAGS -w" LDFLAGS="-s"
+%{__make} CPPFLAGS="$RPM_OPT_FLAGS -w" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
