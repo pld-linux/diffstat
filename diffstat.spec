@@ -5,7 +5,7 @@ Summary(pl):	Umo¿liwia robienie statystyk plików diff
 Summary(tr):	diff dosyasý istatistik bilgileri çýkarýr
 Name:		diffstat
 Version:	1.28
-Release:	3
+Release:	4
 License:	distributable
 Group:		Applications/Text
 Source0:	ftp://ftp.clark.net/pub/dickey/%{name}/%{name}-%{version}.tgz
