@@ -4,12 +4,13 @@ Summary(fr):	Fournit des statistiques sur les différences de fichiers
 Summary(pl):	Umo¿liwia robienie statystyk plików diff
 Summary(tr):	diff dosyasý istatistik bilgileri çýkarýr
 Name:		diffstat
-Version:	1.28
-Release:	4
+Version:	1.35
+Release:	1
 License:	distributable
 Group:		Applications/Text
-Source0:	ftp://ftp.clark.net/pub/dickey/%{name}/%{name}-%{version}.tgz
-# Source0-md5:	c75ab2a0e0be45ac89931e95020aa032
+Source0:	ftp://invisible-island.net/diffstat/%{name}.tar.gz
+# Source0-md5:	97a8061b3f8510d6a5c490eea75d8230
+URL:		http://invisible-island.net/diffstat/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
