@@ -5,8 +5,8 @@ Summary(pl):	Umo¿liwia robienie statystyk plików diff
 Summary(tr):	diff dosyasý istatistik bilgileri çýkarýr
 Name:		diffstat
 Version:	1.28
-Release:	1
-Copyright:	distributable
+Release:	2
+License:	Distributable
 Group:		Applications/Text
 Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
