@@ -53,7 +53,7 @@ make CPPFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 
-install diffstat $RPM_BUILD_ROOT/usr/bin
+install diffstat $RPM_BUILD_ROOT%{_bindir}
 install diffstat.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644, root, root, 755)
 %doc README.gz CHANGES.gz
-%attr(755, root, root) /usr/bin/*
+%attr(755, root, root) %{_bindir}/*
 %{_mandir}/man1/*
 
 %changelog
