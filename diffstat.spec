@@ -69,16 +69,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 
 %{_mandir}/man1/*
-
-%changelog
-* Wed Feb 17 1999 Micha³ Kuratczyk <kura@wroclaw.art.pl>
-  [1.25-7]
-- added gzipping man page and documentation
-- added Group(pl)
-
-* Thu Jul 23 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-  [1.25-6]
-- added pl translation,
-- added buildroot support,
-- build from non root's account,
-- minor changes.
