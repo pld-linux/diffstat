@@ -6,7 +6,7 @@ Summary(tr):	diff dosyasý istatistik bilgileri çýkarýr
 Name:		diffstat
 Version:	1.28
 Release:	3
-License:	Distributable
+License:	distributable
 Group:		Applications/Text
 Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
