@@ -63,9 +63,9 @@ gzip -9nf README CHANGES
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(644, root, root, 755)
+%defattr(644,root,root,755)
 %doc README.gz CHANGES.gz
-%attr(755, root, root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 
 %changelog
