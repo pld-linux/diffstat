@@ -5,11 +5,11 @@ Summary(pl):	Umo¿liwia robienie statystyk plików diff
 Summary(tr):	diff dosyasý istatistik bilgileri çýkarýr
 Name:		diffstat
 Version:	1.27
-Release:	1
+Release:	2
 Copyright:	distributable
 Group:		Utilities/Text
 Group(pl):	Narzêdzia/Tekst
-Source:		ftp.clark.net:/pub/dickey/diffstat/%{name}-%{version}.tgz
+Source:		ftp://ftp.clark.net/pub/dickey/diffstat/%{name}-%{version}.tgz
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -47,18 +47,18 @@ bilgiler çýkartýr.
 
 %build
 
-./configure %{_target_platform} --prefix=%{_prefix}
+%configure
 make CPPFLAGS="$RPM_OPT_FLAGS -w" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/{bin,share/man/man1}
+install -d $RPM_BUILD_ROOT{%%{_bindir},%{_mandir}/man1}
 
 install diffstat $RPM_BUILD_ROOT%{_bindir}
 install diffstat.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
-gzip -9nf README CHANGES
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
+	README CHANGES
 
 %clean
 rm -rf $RPM_BUILD_ROOT
