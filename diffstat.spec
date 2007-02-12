@@ -1,8 +1,8 @@
 Summary:	Provides diff file statistics
-Summary(de):	Liefert diff-Datei-Statistiken
-Summary(fr):	Fournit des statistiques sur les différences de fichiers
-Summary(pl):	Umo¿liwia robienie statystyk plików diff
-Summary(tr):	diff dosyası istatistik bilgileri çıkarır
+Summary(de.UTF-8):   Liefert diff-Datei-Statistiken
+Summary(fr.UTF-8):   Fournit des statistiques sur les diffÃ©rences de fichiers
+Summary(pl.UTF-8):   UmoÅ¼liwia robienie statystyk plikÃ³w diff
+Summary(tr.UTF-8):   diff dosyasÄ± istatistik bilgileri Ã§Ä±karÄ±r
 Name:		diffstat
 Version:	1.41
 Release:	1
@@ -21,29 +21,29 @@ number of changes. It can be useful, for example, to find out what
 changes have been made to a program, just by feeding the update patch
 to diffstat.
 
-%description -l de
-'diffstat' stellt eine Reihe von statistischen Informationen für mit
-Patch erzeugte Diffs bereit, u.a. die Zahl der Einfügungen, der
-Streichungen sowie die Gesamtzahl der Änderungen. So ist es möglich,
-die Änderungen an einem Programm zu ermitteln, indem man das
-Update-Patch durch diffstat durchlaufen läßt.
+%description -l de.UTF-8
+'diffstat' stellt eine Reihe von statistischen Informationen fÃ¼r mit
+Patch erzeugte Diffs bereit, u.a. die Zahl der EinfÃ¼gungen, der
+Streichungen sowie die Gesamtzahl der Ã„nderungen. So ist es mÃ¶glich,
+die Ã„nderungen an einem Programm zu ermitteln, indem man das
+Update-Patch durch diffstat durchlaufen lÃ¤ÃŸt.
 
-%description -l fr
-« diffstat » offre de nombreuses statistiques sur un patch généré par
+%description -l fr.UTF-8
+Â« diffstat Â» offre de nombreuses statistiques sur un patch gÃ©nÃ©rÃ© par
 diff, cela comprend le nombre d'ajouts, de suppressions et le nombre
-total de modifications. Il peut être utile, par exemple, de retrouver
-les modifications faites à un programme en fournissant uniquement le
-patch de mise à jour à diffstat.
+total de modifications. Il peut Ãªtre utile, par exemple, de retrouver
+les modifications faites Ã  un programme en fournissant uniquement le
+patch de mise Ã  jour Ã  diffstat.
 
-%description -l pl
-Diffstat umo¿liwia prowadzenie statystyk pliku (³atki) generowanego
-przez diff. Pakiet ten mo¿e byæ u¿yteczny, na przyk³ad w poszukiwaniu
-zmian, które zosta³y dokonane w jakim¶ programie.
+%description -l pl.UTF-8
+Diffstat umoÅ¼liwia prowadzenie statystyk pliku (Å‚atki) generowanego
+przez diff. Pakiet ten moÅ¼e byÄ‡ uÅ¼yteczny, na przykÅ‚ad w poszukiwaniu
+zmian, ktÃ³re zostaÅ‚y dokonane w jakimÅ› programie.
 
-%description -l tr
-diffstat programı, diff tarafından üretilen bir yama üzerinden toplama
-sayısı, çıkarma sayısı, toplam değişiklik sayısı gibi bazı
-istatistiksel bilgiler çıkartır.
+%description -l tr.UTF-8
+diffstat programÄ±, diff tarafÄ±ndan Ã¼retilen bir yama Ã¼zerinden toplama
+sayÄ±sÄ±, Ã§Ä±karma sayÄ±sÄ±, toplam deÄŸiÅŸiklik sayÄ±sÄ± gibi bazÄ±
+istatistiksel bilgiler Ã§Ä±kartÄ±r.
 
 %prep
 %setup -q
