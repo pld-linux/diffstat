@@ -1,8 +1,8 @@
 Summary:	Provides diff file statistics
-Summary(de.UTF-8):   Liefert diff-Datei-Statistiken
-Summary(fr.UTF-8):   Fournit des statistiques sur les différences de fichiers
-Summary(pl.UTF-8):   Umożliwia robienie statystyk plików diff
-Summary(tr.UTF-8):   diff dosyası istatistik bilgileri çıkarır
+Summary(de.UTF-8):	Liefert diff-Datei-Statistiken
+Summary(fr.UTF-8):	Fournit des statistiques sur les différences de fichiers
+Summary(pl.UTF-8):	Umożliwia robienie statystyk plików diff
+Summary(tr.UTF-8):	diff dosyası istatistik bilgileri çıkarır
 Name:		diffstat
 Version:	1.41
 Release:	1
