@@ -5,7 +5,7 @@ Summary(pl.UTF-8):	Umożliwia robienie statystyk plików diff
 Summary(tr.UTF-8):	diff dosyası istatistik bilgileri çıkarır
 Name:		diffstat
 Version:	1.41
-Release:	1
+Release:	2
 License:	distributable
 Group:		Applications/Text
 Source0:	ftp://invisible-island.net/diffstat/%{name}.tar.gz
