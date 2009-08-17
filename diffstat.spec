@@ -4,12 +4,12 @@ Summary(fr.UTF-8):	Fournit des statistiques sur les différences de fichiers
 Summary(pl.UTF-8):	Umożliwia robienie statystyk plików diff
 Summary(tr.UTF-8):	diff dosyası istatistik bilgileri çıkarır
 Name:		diffstat
-Version:	1.47
+Version:	1.48
 Release:	1
 License:	distributable
 Group:		Applications/Text
 Source0:	ftp://invisible-island.net/diffstat/%{name}.tar.gz
-# Source0-md5:	c6d221ff4a032e1bbf227f5936a7841a
+# Source0-md5:	8593e79189dd4b9c4ec32862e19d716c
 URL:		http://invisible-island.net/diffstat/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -49,7 +49,6 @@ istatistiksel bilgiler çıkartır.
 %setup -q
 
 %build
-chmod -R u+w *
 %{__autoconf}
 %configure
 %{__make} \
