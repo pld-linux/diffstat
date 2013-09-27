@@ -1,17 +1,18 @@
 Summary:	Provides diff file statistics
 Summary(de.UTF-8):	Liefert diff-Datei-Statistiken
 Summary(fr.UTF-8):	Fournit des statistiques sur les différences de fichiers
-Summary(pl.UTF-8):	Umożliwia robienie statystyk plików diff
+Summary(pl.UTF-8):	Tworzenie statystyk plików diff
 Summary(tr.UTF-8):	diff dosyası istatistik bilgileri çıkarır
 Name:		diffstat
-Version:	1.55
+Version:	1.57
 Release:	1
-License:	distributable
+License:	MIT-like
 Group:		Applications/Text
-Source0:	ftp://invisible-island.net/diffstat/%{name}.tar.gz
-# Source0-md5:	630d5278f1cd874dc3cc68cff3fddecf
+Source0:	ftp://invisible-island.net/diffstat/%{name}-%{version}.tgz
+# Source0-md5:	a70ae35e479ab91da7eb6023a4e9240a
 URL:		http://invisible-island.net/diffstat/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.53
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,9 +37,10 @@ les modifications faites à un programme en fournissant uniquement le
 patch de mise à jour à diffstat.
 
 %description -l pl.UTF-8
-Diffstat umożliwia prowadzenie statystyk pliku (łatki) generowanego
-przez diff. Pakiet ten może być użyteczny, na przykład w poszukiwaniu
-zmian, które zostały dokonane w jakimś programie.
+Diffstat umożliwia tworzenie statystyk pliku patch (łatki)
+generowanego przez diff - w tym liczby linii dodanych, usuniętych oraz
+całkowitej liczby zmian. Pakiet ten może być użyteczny na przykład w
+poszukiwaniu zmian, które zostały dokonane w jakimś programie.
 
 %description -l tr.UTF-8
 diffstat programı, diff tarafından üretilen bir yama üzerinden toplama
@@ -47,6 +49,8 @@ istatistiksel bilgiler çıkartır.
 
 %prep
 %setup -q
+
+%{__sed} -i -e 's/AC_ACVERSION/AC_AUTOCONF_VERSION/' aclocal.m4
 
 %build
 %{__autoconf}
@@ -67,5 +71,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README CHANGES
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/diffstat
 %{_mandir}/man1/diffstat.1*
