@@ -4,12 +4,12 @@ Summary(fr.UTF-8):	Fournit des statistiques sur les différences de fichiers
 Summary(pl.UTF-8):	Tworzenie statystyk plików diff
 Summary(tr.UTF-8):	diff dosyası istatistik bilgileri çıkarır
 Name:		diffstat
-Version:	1.58
+Version:	1.60
 Release:	1
 License:	MIT-like
 Group:		Applications/Text
 Source0:	ftp://invisible-island.net/diffstat/%{name}-%{version}.tgz
-# Source0-md5:	6d6e13f7dcfe4db5da65c5175260ea47
+# Source0-md5:	ba889da4c06b547aa2d78fa96800ae6f
 URL:		http://invisible-island.net/diffstat/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	sed >= 4.0
@@ -60,10 +60,8 @@ istatistiksel bilgiler çıkartır.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
-
-install diffstat $RPM_BUILD_ROOT%{_bindir}
-install diffstat.1 $RPM_BUILD_ROOT%{_mandir}/man1
+%{__make} install \
+	DESTDIR="$RPM_BUILD_ROOT"
 
 %clean
 rm -rf $RPM_BUILD_ROOT
