@@ -4,12 +4,12 @@ Summary(fr.UTF-8):	Fournit des statistiques sur les différences de fichiers
 Summary(pl.UTF-8):	Tworzenie statystyk plików diff
 Summary(tr.UTF-8):	diff dosyası istatistik bilgileri çıkarır
 Name:		diffstat
-Version:	1.60
+Version:	1.61
 Release:	1
 License:	MIT-like
 Group:		Applications/Text
 Source0:	ftp://invisible-island.net/diffstat/%{name}-%{version}.tgz
-# Source0-md5:	ba889da4c06b547aa2d78fa96800ae6f
+# Source0-md5:	c048a32d55d8bd6724f382baf41f325f
 URL:		http://invisible-island.net/diffstat/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	sed >= 4.0
