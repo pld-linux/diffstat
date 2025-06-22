@@ -8,7 +8,7 @@ Version:	1.61
 Release:	1
 License:	MIT-like
 Group:		Applications/Text
-Source0:	ftp://invisible-island.net/diffstat/%{name}-%{version}.tgz
+Source0:	https://invisible-island.net/archives/diffstat/%{name}-%{version}.tgz
 # Source0-md5:	c048a32d55d8bd6724f382baf41f325f
 URL:		http://invisible-island.net/diffstat/
 BuildRequires:	autoconf >= 2.53
