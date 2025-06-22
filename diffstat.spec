@@ -53,7 +53,16 @@ istatistiksel bilgiler çıkartır.
 %build
 %{__autoconf}
 %{__autoheader}
-%configure
+%configure \
+	BZCAT=/usr/bin/bzcat \
+	BZIP2=/usr/bin/bzip2 \
+	COMPRESS=/usr/bin/compress \
+	GZIP=/bin/gzip \
+	LZCAT=/usr/bin/lzcat \
+	UNCOMPRESS=/usr/bin/uncompress \
+	XZ=/usr/bin/xz \
+	ZCAT=/bin/zcat \
+	ZSTD=/usr/bin/zstd
 %{__make}
 
 %install
