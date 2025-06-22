@@ -4,12 +4,12 @@ Summary(fr.UTF-8):	Fournit des statistiques sur les différences de fichiers
 Summary(pl.UTF-8):	Tworzenie statystyk plików diff
 Summary(tr.UTF-8):	diff dosyası istatistik bilgileri çıkarır
 Name:		diffstat
-Version:	1.61
+Version:	1.68
 Release:	1
 License:	MIT-like
 Group:		Applications/Text
 Source0:	https://invisible-island.net/archives/diffstat/%{name}-%{version}.tgz
-# Source0-md5:	c048a32d55d8bd6724f382baf41f325f
+# Source0-md5:	51fa7127900544987dc3f7b8e4233f0b
 URL:		http://invisible-island.net/diffstat/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	sed >= 4.0
@@ -50,13 +50,11 @@ istatistiksel bilgiler çıkartır.
 %prep
 %setup -q
 
-%{__sed} -i -e 's/AC_ACVERSION/AC_AUTOCONF_VERSION/' aclocal.m4
-
 %build
 %{__autoconf}
+%{__autoheader}
 %configure
-%{__make} \
-	CPPFLAGS="%{rpmcflags} -w"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
